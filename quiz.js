@@ -9,21 +9,21 @@ const GEBURTSTAGS_SEITE = "https://DEIN-NAME.github.io/REPO-NAME/"; // Link zur 
 // Beispiel: { f: "Wo war unser erstes Date?", o: ["Kino", "Park", "Café", "Strand"], r: 2 }  (ergibt den Buchstaben C)
 // Die 15 Beispiele unten ergeben das Wort DUBISTMEINEWELT. Ersetze Fragen und Antworten durch deine eigenen.
 const MILLIONAER = [
-  { f: "Wo hatten wir unser erstes Date?", o: ["Braunschweig", "Augustdorf", "Borgsdorf", "Bielefeld"], r: 4, b: "D" },
-  { f: "Was esse ich am liebsten?", o: ["Pizza", "Sushi", "Nudeln", "Burger"], r: 0, b: "U" },
-  { f: "In welchem Monat sind wir zusammengekommen?", o: ["März", "April", "Mai", "Juni"], r: 1, b: "B" },
+  { f: "Wo hatten wir unser erstes Date?", o: ["Braunschweig", "Augustdorf", "Borgsdorf", "Bielefeld"], r: 3, b: "I" },
+  { f: "Was esse ich am liebsten?", o: ["Pizza", "Sushi", "Nudeln", "Burger"], r: 0, b: "D" },
+  { f: "In welchem Monat sind wir zusammengekommen?", o: ["März", "April", "Mai", "Juni"], r: 1, b: "T" },
   { f: "Was ist mein Lieblingsfilm?", o: ["Titanic", "Findet Nemo", "Aladdin", "Oben"], r: 3, b: "I" },
-  { f: "Welches Tier mag ich am liebsten?", o: ["Hund", "Katze", "Pferd", "Otter"], r: 0, b: "S" },
-  { f: "Wohin wollen wir unbedingt zusammen reisen?", o: ["Italien", "Japan", "Kanada", "Island"], r: 2, b: "T" },
-  { f: "Was machen wir am liebsten am Wochenende?", o: ["Ausschlafen", "Wandern", "Filme schauen", "Kochen"], r: 1, b: "M" },
-  { f: "Was ist meine Lieblingsfarbe?", o: ["Blau", "Grün", "Rosa", "Schwarz"], r: 3, b: "E" },
-  { f: "Wer von uns kommt öfter zu spät?", o: ["Du", "Ich", "Beide gleich", "Keiner"], r: 2, b: "I" },
-  { f: "Wie nenne ich dich am liebsten?", o: ["Schatz", "Maus", "Bärchen", "Hase"], r: 1, b: "N" },
-  { f: "Wer hat sich beim ersten Treffen mehr getraut?", o: ["Du", "Ich", "Beide", "Keiner"], r: 0, b: "E" },
-  { f: "Was esse ich morgens am liebsten?", o: ["Müsli", "Brötchen", "Obst", "Nichts"], r: 1, b: "W" },
-  { f: "Welche Jahreszeit mag ich am liebsten?", o: ["Frühling", "Sommer", "Herbst", "Winter"], r: 2, b: "E" },
-  { f: "Was war unser schönster gemeinsamer Moment?", o: ["Urlaub", "Kennenlernen", "Geburtstag", "Jahrestag"], r: 1, b: "L" },
-  { f: "Was ist mein größter Traum?", o: ["Weltreise", "Eigenes Haus", "Berühmt werden", "Ein Café"], r: 0, b: "T" }
+  { f: "Welches Tier mag ich am liebsten?", o: ["Hund", "Katze", "Pferd", "Otter"], r: 0, b: "L" },
+  { f: "Wohin wollen wir unbedingt zusammen reisen?", o: ["Italien", "Japan", "Kanada", "Island"], r: 2, b: "M" },
+  { f: "Was machen wir am liebsten am Wochenende?", o: ["Ausschlafen", "Wandern", "Filme schauen", "Kochen"], r: 1, b: "E" },
+  { f: "Was ist meine Lieblingsfarbe?", o: ["Blau", "Grün", "Rosa", "Schwarz"], r: 3, b: "U" },
+  { f: "Wer von uns kommt öfter zu spät?", o: ["Du", "Ich", "Beide gleich", "Keiner"], r: 2, b: "S" },
+  { f: "Wie nenne ich dich am liebsten?", o: ["Schatz", "Maus", "Bärchen", "Hase"], r: 1, b: "B" },
+  { f: "Wer hat sich beim ersten Treffen mehr getraut?", o: ["Du", "Ich", "Beide", "Keiner"], r: 0, b: "T" },
+  { f: "Was esse ich morgens am liebsten?", o: ["Müsli", "Brötchen", "Obst", "Nichts"], r: 1, b: "E" },
+  { f: "Welche Jahreszeit mag ich am liebsten?", o: ["Frühling", "Sommer", "Herbst", "Winter"], r: 2, b: "N" },
+  { f: "Was war unser schönster gemeinsamer Moment?", o: ["Urlaub", "Kennenlernen", "Geburtstag", "Jahrestag"], r: 1, b: "E" },
+  { f: "Was ist mein größter Traum?", o: ["Weltreise", "Eigenes Haus", "Berühmt werden", "Ein Café"], r: 0, b: "W" }
 ];
 
 (function () {
@@ -73,11 +73,11 @@ const MILLIONAER = [
               area.appendChild(el("p", "spiel-frage", "Du hast " + idx * EURO_PRO_FRAGE + " € gewonnen."));
               const rest = VERSUCHE - st.versuche;
               if (rest > 0) area.appendChild(knopf("Nochmal (" + rest + " übrig)", start));
-else {
-  st.versuche = 0; speichern();
-  area.appendChild(el("p", "small-line", "Drei Fehlversuche, das Quiz startet von vorn."));
-  area.appendChild(knopf("Neu starten", start));
-}
+                  else {
+                    st.versuche = 0; speichern();
+                    area.appendChild(el("p", "small-line", "Drei Fehlversuche, das Quiz startet von vorn."));
+                    area.appendChild(knopf("Neu starten", start));
+                  }
             }, 1400);
           }
         });
