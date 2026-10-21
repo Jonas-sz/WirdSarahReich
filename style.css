@@ -1,0 +1,261 @@
+:root {
+  --bg: #3a1e2c;
+  --bg-soft: #4b2838;
+  --paper: #fbf7f4;
+  --ink: #2a1a22;
+  --text: #f4e6e6;
+  --accent: #f0a9a0;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Lora", Georgia, serif;
+  line-height: 1.7;
+}
+
+body {
+  background: radial-gradient(circle at 50% 0%, var(--bg-soft), var(--bg) 70%);
+  min-height: 100vh;
+}
+
+main {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+  text-align: center;
+}
+
+h1, #day-label, #day-caption {
+  font-family: "Caveat", cursive;
+}
+
+h1 { font-size: 2.6rem; margin: 20vh 0 8px; }
+
+#day-label {
+  font-size: 1.7rem;
+  color: var(--accent);
+  margin: 0 0 18px;
+}
+
+.polaroid {
+  margin: 0 auto 28px;
+  padding: 12px 12px 8px;
+  background: var(--paper);
+  color: var(--ink);
+  max-width: 340px;
+  transform: rotate(-2deg);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #ddd;
+}
+
+#day-caption {
+  font-size: 1.5rem;
+  padding: 10px 0 4px;
+}
+
+#day-text {
+  font-size: 1.1rem;
+  text-align: left;
+  white-space: pre-line;
+  max-width: 46ch;
+  margin: 0 auto 32px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+button {
+  font: inherit;
+  font-family: "Caveat", cursive;
+  font-size: 1.4rem;
+  color: var(--text);
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  padding: 6px 22px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) { background: var(--accent); color: var(--ink); }
+button:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+button:disabled { opacity: 0.3; cursor: default; }
+
+[hidden] { display: none !important; }
+
+/* ===== Startseite ===== */
+.back {
+  display: inline-block;
+  font-family: "Caveat", cursive;
+  font-size: 1.4rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.hero { margin: 8vh 0 28px; }
+.hero h1 { margin: 0 0 4px; }
+.hero p { margin: 0; color: var(--accent); font-family: "Caveat", cursive; font-size: 1.6rem; }
+
+.big-number {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 18px 0 0;
+}
+.big-label { font-family: "Caveat", cursive; font-size: 1.8rem; color: var(--accent); margin: 0 0 6px; }
+.small-line { opacity: 0.75; font-size: 0.95rem; margin: 0 0 32px; }
+
+.cards { display: grid; gap: 14px; margin-bottom: 28px; }
+.card {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 14px 18px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+.card:nth-child(odd) { transform: rotate(-1.2deg); }
+.card:nth-child(even) { transform: rotate(1deg); }
+.card .kicker { font-family: "Caveat", cursive; font-size: 1.4rem; margin: 0; }
+.card .num { font-family: "Caveat", cursive; font-weight: 700; font-size: 3rem; line-height: 1.1; margin: 0; }
+.card .sub { margin: 0; font-size: 0.9rem; opacity: 0.7; }
+
+#herz {
+  font-size: 3.4rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--accent);
+  transition: transform 0.15s;
+}
+#herz:hover { background: none; }
+#herz:active { transform: scale(1.25); }
+#herz-text { min-height: 3.4em; font-style: italic; margin: 6px auto 28px; max-width: 34ch; }
+
+.cta {
+  display: inline-block;
+  font-family: "Caveat", cursive;
+  font-size: 1.6rem;
+  color: var(--text);
+  text-decoration: none;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  padding: 8px 28px;
+}
+.cta:hover { background: var(--accent); color: var(--ink); }
+
+.floating-heart {
+  position: fixed;
+  pointer-events: none;
+  font-size: 1.6rem;
+  animation: floatUp 1.6s ease-out forwards;
+  z-index: 10;
+}
+@keyframes floatUp {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(-140px) scale(1.5); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-heart { animation: none; opacity: 0; }
+}
+
+/* ===== iPhone-Vollbild: Platz für Notch und Home-Leiste ===== */
+main {
+  padding-top: max(32px, env(safe-area-inset-top));
+  padding-bottom: max(56px, env(safe-area-inset-bottom));
+}
+
+/* ===== Passwort-Sperre ===== */
+html.gesperrt main { display: none; }
+
+#sperre {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at 50% 0%, var(--bg-soft), var(--bg) 70%);
+  text-align: center;
+}
+#sperre-form { width: 100%; max-width: 320px; }
+#sperre h1 { margin: 0 0 18px; font-size: 2.4rem; }
+.sperre-herz { font-size: 3rem; color: var(--accent); margin: 0; }
+.sperre-label { display: block; margin-bottom: 10px; opacity: 0.85; }
+#sperre-pw {
+  width: 100%;
+  font: inherit;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--ink);
+  background: var(--paper);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+#sperre-pw:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+#sperre-fehler { min-height: 1.6em; color: var(--accent); margin: 10px 0 14px; }
+
+/* ===== Antwort, Spiele ===== */
+#antwort-btn { margin: -12px 0 28px; }
+#day-antwort { font-family: "Caveat", cursive; font-size: 1.9rem; color: var(--accent); margin: -12px 0 28px; }
+.ctas { display: grid; gap: 14px; justify-items: center; margin-top: 8px; }
+.cta + .cta { margin-top: 12px; }
+
+/* Ja/Nein-Spiel */
+.frage-gross { font-family: "Caveat", cursive; font-size: 3.2rem; margin: 14vh 0 36px; line-height: 1.1; }
+#ja {
+  font-size: 2.6rem; padding: 14px 64px; color: var(--ink); background: #3fbf6b;
+  border: none; border-radius: 999px; animation: leuchten 1.4s ease-in-out infinite;
+}
+#ja:hover { background: #55d682; color: var(--ink); }
+@keyframes leuchten {
+  0%, 100% { box-shadow: 0 0 10px 2px rgba(63, 191, 107, 0.55); }
+  50% { box-shadow: 0 0 34px 12px rgba(63, 191, 107, 0.95); }
+}
+#nein { position: fixed; left: 50%; bottom: 14vh; transform: translateX(-50%); z-index: 5; padding: 2px 12px; }
+#richtig { font-family: "Caveat", cursive; font-size: 3rem; color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { #ja { animation: none; box-shadow: 0 0 24px 6px rgba(63, 191, 107, 0.8); } }
+
+/* ===== Tagesspiele und Rückblick ===== */
+h2 { font-family: "Caveat", cursive; font-size: 2rem; color: var(--accent); margin: 28px 0 10px; }
+.spiel-frage { font-family: "Caveat", cursive; font-size: 2.2rem; line-height: 1.2; white-space: pre-line; margin: 5vh 0 20px; }
+.opts { display: grid; gap: 12px; }
+.opts button, .mem button { font-size: 1.5rem; }
+.opts button.richtig, .mem button.richtig { background: #3fbf6b; border-color: #3fbf6b; color: var(--ink); }
+.mem { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.mem button { padding: 14px 0; font-size: 2rem; border-radius: 14px; }
+.mem button:disabled { opacity: 1; }
+.feld { position: relative; height: 50vh; border: 1.5px dashed var(--accent); border-radius: 16px; overflow: hidden; }
+.herz { position: absolute; font-size: 2.6rem; background: none; border: none; padding: 0; color: var(--accent); }
+.herz:hover:not(:disabled) { background: none; color: var(--accent); }
+.spiel-eingabe { font: inherit; font-size: 1.3rem; text-align: center; border: none; border-radius: 10px; padding: 10px; margin: 8px 8px 12px 0; width: min(70%, 220px); }
+.ergebnis { font-family: "Caveat", cursive; font-size: 2.4rem; color: var(--accent); margin-top: 24px; }
+.chips { display: grid; gap: 8px; text-align: left; margin-bottom: 20px; }
+.chip { display: block; padding: 10px 16px; border: 1.5px solid var(--accent); border-radius: 12px; color: var(--text); text-decoration: none; }
+.chip:hover { background: var(--accent); color: var(--ink); }
+#spiel-link { margin-top: 20px; }
+
+/* ===== Quiz um 150 € ===== */
+.dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 20px 0 10px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--accent); }
+.dot.an { background: #3fbf6b; border-color: #3fbf6b; }
+.wort { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; margin: 6px 0 4px; font-family: "Caveat", cursive; font-size: 1.7rem; }
+.wort span { min-width: 1.1em; border-bottom: 2px solid var(--accent); }
+.opts button:disabled { opacity: 1; }
+.opts button.falsch { background: #e07a7a; border-color: #e07a7a; color: var(--ink); }
