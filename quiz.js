@@ -7,10 +7,24 @@ const GEBURTSTAGS_SEITE = "https://DEIN-NAME.github.io/REPO-NAME/"; // Link zur 
 // f = Frage, o = 4 Antworten, r = Nummer der richtigen Antwort (0 = A, 1 = B, 2 = C, 3 = D)
 // b = Buchstabe fürs Lösungswort. Fehlt b, zählt der erste Buchstabe der richtigen Antwort.
 // Beispiel: { f: "Wo war unser erstes Date?", o: ["Kino", "Park", "Café", "Strand"], r: 2 }  (ergibt den Buchstaben C)
-// Die 15 Platzhalter unten ergeben das Wort HERZENSMENSCHEN. Ersetze sie durch eigene Fragen.
-const MILLIONAER = Array.from("HERZENSMENSCHEN").map(function (b, i) {
-  return { f: "[Frage " + (i + 1) + " über uns]", o: ["Antwort A", "Antwort B", "Antwort C", "Antwort D"], r: i % 4, b: b };
-});
+// Die 15 Beispiele unten ergeben das Wort DUBISTMEINEWELT. Ersetze Fragen und Antworten durch deine eigenen.
+const MILLIONAER = [
+  { f: "Wo hatten wir unser erstes Date?", o: ["Braunschweig", "Augustdorf", "Borgsdorf", "Bielefeld"], r: 4, b: "D" },
+  { f: "Was esse ich am liebsten?", o: ["Pizza", "Sushi", "Nudeln", "Burger"], r: 0, b: "U" },
+  { f: "In welchem Monat sind wir zusammengekommen?", o: ["März", "April", "Mai", "Juni"], r: 1, b: "B" },
+  { f: "Was ist mein Lieblingsfilm?", o: ["Titanic", "Findet Nemo", "Aladdin", "Oben"], r: 3, b: "I" },
+  { f: "Welches Tier mag ich am liebsten?", o: ["Hund", "Katze", "Pferd", "Otter"], r: 0, b: "S" },
+  { f: "Wohin wollen wir unbedingt zusammen reisen?", o: ["Italien", "Japan", "Kanada", "Island"], r: 2, b: "T" },
+  { f: "Was machen wir am liebsten am Wochenende?", o: ["Ausschlafen", "Wandern", "Filme schauen", "Kochen"], r: 1, b: "M" },
+  { f: "Was ist meine Lieblingsfarbe?", o: ["Blau", "Grün", "Rosa", "Schwarz"], r: 3, b: "E" },
+  { f: "Wer von uns kommt öfter zu spät?", o: ["Du", "Ich", "Beide gleich", "Keiner"], r: 2, b: "I" },
+  { f: "Wie nenne ich dich am liebsten?", o: ["Schatz", "Maus", "Bärchen", "Hase"], r: 1, b: "N" },
+  { f: "Wer hat sich beim ersten Treffen mehr getraut?", o: ["Du", "Ich", "Beide", "Keiner"], r: 0, b: "E" },
+  { f: "Was esse ich morgens am liebsten?", o: ["Müsli", "Brötchen", "Obst", "Nichts"], r: 1, b: "W" },
+  { f: "Welche Jahreszeit mag ich am liebsten?", o: ["Frühling", "Sommer", "Herbst", "Winter"], r: 2, b: "E" },
+  { f: "Was war unser schönster gemeinsamer Moment?", o: ["Urlaub", "Kennenlernen", "Geburtstag", "Jahrestag"], r: 1, b: "L" },
+  { f: "Was ist mein größter Traum?", o: ["Weltreise", "Eigenes Haus", "Berühmt werden", "Ein Café"], r: 0, b: "T" }
+];
 
 (function () {
   const KEY = "fd-millionaer", area = document.getElementById("spiel");
