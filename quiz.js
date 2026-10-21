@@ -23,7 +23,7 @@ const MILLIONAER = [
   { f: "Was esse ich morgens am liebsten?", o: ["Müsli", "Brötchen", "Obst", "Nichts"], r: 1, b: "E" },
   { f: "Welche Jahreszeit mag ich am liebsten?", o: ["Frühling", "Sommer", "Herbst", "Winter"], r: 2, b: "N" },
   { f: "Was war unser schönster gemeinsamer Moment?", o: ["Urlaub", "Kennenlernen", "Geburtstag", "Jahrestag"], r: 1, b: "E" },
-  { f: "Was ist mein größter Traum?", o: ["Weltreise", "Eigenes Haus", "Berühmt werden", "Ein Café"], r: 0, b: "W" }
+  { f: "Wohin werden wir heute noch fahren?", o: ["Weltreise", "Eigenes Haus", "Berühmt werden", "Ein Café"], r: 0, b: "W" }
 ];
 
 (function () {
