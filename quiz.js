@@ -73,7 +73,11 @@ const MILLIONAER = [
               area.appendChild(el("p", "spiel-frage", "Du hast " + idx * EURO_PRO_FRAGE + " € gewonnen."));
               const rest = VERSUCHE - st.versuche;
               if (rest > 0) area.appendChild(knopf("Nochmal (" + rest + " übrig)", start));
-              else area.appendChild(el("p", "small-line", "Alle Versuche sind verbraucht."));
+else {
+  st.versuche = 0; speichern();
+  area.appendChild(el("p", "small-line", "Drei Fehlversuche, das Quiz startet von vorn."));
+  area.appendChild(knopf("Neu starten", start));
+}
             }, 1400);
           }
         });
