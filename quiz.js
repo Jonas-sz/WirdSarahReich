@@ -1,6 +1,6 @@
 // ===== EINSTELLUNGEN =====
 const EURO_PRO_FRAGE = 10; // Gewinn pro richtiger Antwort (15 Fragen = 150 €)
-const VERSUCHE = 3;        // wie oft sie von vorn anfangen darf (1 = nur ein Versuch)
+const VERSUCHE = 5;        // wie oft sie von vorn anfangen darf (1 = nur ein Versuch)
 const GEBURTSTAGS_SEITE = "https://DEIN-NAME.github.io/REPO-NAME/"; // Link zur Geburtstags-Website (erscheint am Ende)
 
 // ===== FRAGEN =====
