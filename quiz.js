@@ -10,10 +10,10 @@ const GEBURTSTAGS_SEITE = "https://jonas-sz.github.io/fuer-dich-8k2x/"; // Link 
 // Die 15 Beispiele unten ergeben das Wort DUBISTMEINEWELT. Ersetze Fragen und Antworten durch deine eigenen.
 const MILLIONAER = [
   { f: "Wo hatten wir unser erstes Date?", o: ["Braunschweig", "Augustdorf", "Borgsdorf", "Bielefeld"], r: 3, b: "I" },
-  { f: "Was esse ich am liebsten?", o: ["Pizza", "Sushi", "Nudeln", "Burger"], r: 0, b: "D" },
-  { f: "In welchem Monat sind wir zusammengekommen?", o: ["März", "April", "Mai", "Juni"], r: 1, b: "T" },
-  { f: "Was ist mein Lieblingsfilm?", o: ["Titanic", "Findet Nemo", "Aladdin", "Oben"], r: 3, b: "I" },
-  { f: "Welches Tier mag ich am liebsten?", o: ["Hund", "Katze", "Pferd", "Otter"], r: 0, b: "L" },
+  { f: "Wieviele Zettel sind in diesem Raum versteckt?", o: ["4", "5", "6", "keiner"], r: 1, b: "D" },
+  { f: "Welcher Wochentag ist dein 63 Geburtstag?", o: ["Montag", "Freitag", "Mittwoch", "Sonntag"], r: 2, b: "T" },
+  { f: "Welcher Psychologe führte das berühmte Experiment durch, bei dem Menschen vermeintlich anderen Personen tödliche Elektroschocks verabreichten, weil eine Autoritätsperson sie dazu aufforderte?", o: ["Philip Zimbardo", "Stanley Milgram", "Stanley Milgram", "B. F. Skinner"], r: 1, b: "I" },
+  { f: "Welchen Hubzapfenversatz besitzt die 689-cm³-Zweizylinder-Reihenmotor der Yamaha YZF-R7?", o: ["90°", "180°", "270°", "360°"], r: 2, b: "L" },
   { f: "Wohin wollen wir unbedingt zusammen reisen?", o: ["Italien", "Japan", "Kanada", "Island"], r: 2, b: "M" },
   { f: "Was machen wir am liebsten am Wochenende?", o: ["Ausschlafen", "Wandern", "Filme schauen", "Kochen"], r: 1, b: "E" },
   { f: "Was ist meine Lieblingsfarbe?", o: ["Blau", "Grün", "Rosa", "Schwarz"], r: 3, b: "U" },
@@ -23,7 +23,7 @@ const MILLIONAER = [
   { f: "Was esse ich morgens am liebsten?", o: ["Müsli", "Brötchen", "Obst", "Nichts"], r: 1, b: "E" },
   { f: "Welche Jahreszeit mag ich am liebsten?", o: ["Frühling", "Sommer", "Herbst", "Winter"], r: 2, b: "N" },
   { f: "Was war unser schönster gemeinsamer Moment?", o: ["Urlaub", "Kennenlernen", "Geburtstag", "Jahrestag"], r: 1, b: "E" },
-  { f: "Wohin werden wir heute noch fahren?", o: ["Weltreise", "Eigenes Haus", "Berühmt werden", "Ein Café"], r: 0, b: "W" }
+  { f: "Wohin werden wir fahren?", o: ["Weltreise", "Eigenes Haus", "Berühmt werden", "Ein Café"], r: 0, b: "W" }
 ];
 
 (function () {
@@ -41,7 +41,7 @@ const MILLIONAER = [
   function start() {
     leeren();
     if (st.fertig) return sieg();
-    area.appendChild(el("p", "spiel-frage", "Beantworte " + N + " Fragen über uns.\nFür jede richtige Antwort gibt es " + EURO_PRO_FRAGE + " €, am Ende " + HAUPT + " €.\nDie Buchstaben der richtigen Antworten ergeben ein Wort: das Passwort zu deinem Geschenk."));
+    area.appendChild(el("p", "spiel-frage", "Beantworte " + N + " Fragen und verdiene dir deine Belohnungen!"));
     const rest = VERSUCHE - st.versuche;
     if (rest <= 0) { area.appendChild(el("p", "ergebnis", "Alle Versuche sind verbraucht.")); return; }
     area.appendChild(knopf("Los geht’s (" + rest + (rest === 1 ? " Versuch" : " Versuche") + ")", function () { st.versuche++; speichern(); spiel(); }));
@@ -99,7 +99,7 @@ const MILLIONAER = [
     area.appendChild(el("p", "ergebnis", "Hauptgewinn: " + HAUPT + " € ♥"));
     area.appendChild(el("p", "spiel-frage", "Alle Buchstaben gefunden:"));
     area.appendChild(wortBox(MILLIONAER.map(buchstabe)));
-    area.appendChild(el("p", "small-line", "Das ist dein Passwort für die Geburtstags-Website."));
+    area.appendChild(el("p", "small-line", "Du bist jetzt (fast) Millionär!"));
     if (GEBURTSTAGS_SEITE.indexOf("DEIN-NAME") < 0) {
       const a = el("a", "cta", "Zur Geburtstags-Website ›"); a.href = GEBURTSTAGS_SEITE; area.appendChild(a);
     }
