@@ -15,7 +15,7 @@ const MILLIONAER = [
   { f: "Welcher Psychologe führte das berühmte Experiment durch, bei dem Menschen vermeintlich anderen Personen tödliche Elektroschocks verabreichten, weil eine Autoritätsperson sie dazu aufforderte?", o: ["Philip Zimbardo", "Stanley Milgram", "Solomon Asch", "B. F. Skinner"], r: 1, b: "I" },
   { f: "Wohin werden wir fahren?", o: ["Borgsdorf", "Spazieren", "McDonalds", "Zeitung verteilen"], r: 0, b: "W" },
   { f: "Welchen Hubzapfenversatz besitzt die 689-cm³-Zweizylinder-Reihenmotor der Yamaha YZF-R7?", o: ["90°", "180°", "270°", "360°"], r: 2, b: "L" },
-  { f: "Wohin wollen wir unbedingt zusammen reisen?", o: ["Italien", "Japan", "Kanada", "Island"], r: 2, b: "M" },
+  { f: "Welches Tier siehst du? 70.083, 27.883 ?", o: ["Katze", "Bär", "Ziege", "Hund"], r: 3, b: "M" },
   { f: "Was machen wir am liebsten am Wochenende?", o: ["Ausschlafen", "Wandern", "Filme schauen", "Kochen"], r: 1, b: "E" },
   { f: "Was ist meine Lieblingsfarbe?", o: ["Blau", "Grün", "Rosa", "Schwarz"], r: 3, b: "U" },
   { f: "Wer von uns kommt öfter zu spät?", o: ["Du", "Ich", "Beide gleich", "Keiner"], r: 2, b: "S" },
