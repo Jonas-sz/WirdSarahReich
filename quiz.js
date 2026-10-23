@@ -72,7 +72,7 @@ localStorage.removeItem(KEY);
             b.classList.add("richtig"); buchst.push(buchstabe(q)); idx++;
             setTimeout(function () { if (idx >= N) { st.fertig = true; speichern(); sieg(); } else frage(); }, 1100);
           } else {
-            b.classList.add("falsch"); kn[q.r].classList.add("richtig");
+            b.classList.add("falsch");
             setTimeout(function () {
               leeren();
               area.appendChild(el("p", "ergebnis", "Leider falsch."));
