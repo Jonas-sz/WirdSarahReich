@@ -1,6 +1,6 @@
 // ===== EINSTELLUNGEN =====
 const EURO_PRO_FRAGE = 0; // Gewinn pro richtiger Antwort (15 Fragen = 150 €)
-const VERSUCHE = 100;        // wie oft sie von vorn anfangen darf (1 = nur ein Versuch)
+const VERSUCHE = 5;        // wie oft sie von vorn anfangen darf (1 = nur ein Versuch)
 const GEBURTSTAGS_SEITE = "https://jonas-sz.github.io/fuer-dich-8k2x/"; // Link zur Geburtstags-Website (erscheint am Ende)
 
 // ===== FRAGEN =====
@@ -96,10 +96,10 @@ const MILLIONAER = [
 
   function sieg() {
     leeren();
-    area.appendChild(el("p", "ergebnis", "Hauptgewinn: " + HAUPT + " € ♥"));
+    area.appendChild(el("p", "ergebnis", "Hauptgewinn: " 150 " € ♥"));
     area.appendChild(el("p", "spiel-frage", "Alle Buchstaben gefunden:"));
     area.appendChild(wortBox(MILLIONAER.map(buchstabe)));
-    area.appendChild(el("p", "small-line", "Du bist jetzt (fast) Millionär!"));
+    area.appendChild(el("p", "small-line", "Die Buchstaben wirst du noch brauchen!"));
     if (GEBURTSTAGS_SEITE.indexOf("DEIN-NAME") < 0) {
       const a = el("a", "cta", "Zur Geburtstags-Website ›"); a.href = GEBURTSTAGS_SEITE; area.appendChild(a);
     }
