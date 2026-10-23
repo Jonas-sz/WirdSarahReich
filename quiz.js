@@ -96,7 +96,7 @@ const MILLIONAER = [
 
   function sieg() {
     leeren();
-    area.appendChild(el("p", "ergebnis", "Hauptgewinn: " 150 " € ♥"));
+    area.appendChild(el("p", "ergebnis", "Hauptgewinn: 150 € ♥"));
     area.appendChild(el("p", "spiel-frage", "Alle Buchstaben gefunden:"));
     area.appendChild(wortBox(MILLIONAER.map(buchstabe)));
     area.appendChild(el("p", "small-line", "Die Buchstaben wirst du noch brauchen!"));
