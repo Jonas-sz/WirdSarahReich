@@ -27,11 +27,17 @@ const MILLIONAER = [
 ];
 
 (function () {
-  const KEY = "fd-millionaer", area = document.getElementById("spiel");
-  const N = MILLIONAER.length, HAUPT = N * EURO_PRO_FRAGE;
-  const buchstabe = (q) => (q.b || q.o[q.r].charAt(0)).toUpperCase();
-  let st = { versuche: 0, fertig: false };
-  try { st = Object.assign(st, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) {}
+  
+
+const KEY = "fd-millionaer", area = document.getElementById("spiel");
+const N = MILLIONAER.length, HAUPT = N * EURO_PRO_FRAGE;
+const buchstabe = (q) => (q.b || q.o[q.r].charAt(0)).toUpperCase();
+
+let st = { versuche: 0, fertig: false };
+
+localStorage.removeItem(KEY);
+
+
   function speichern() { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} }
   function el(t, c, x) { const e = document.createElement(t); if (c) e.className = c; if (x) e.textContent = x; return e; }
   function knopf(t, f) { const b = el("button", "", t); b.onclick = f; return b; }
