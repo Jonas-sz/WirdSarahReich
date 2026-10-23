@@ -1,5 +1,5 @@
 // ===== EINSTELLUNGEN =====
-const EURO_PRO_FRAGE = 10; // Gewinn pro richtiger Antwort (15 Fragen = 150 €)
+const EURO_PRO_FRAGE = 0; // Gewinn pro richtiger Antwort (15 Fragen = 150 €)
 const VERSUCHE = 100;        // wie oft sie von vorn anfangen darf (1 = nur ein Versuch)
 const GEBURTSTAGS_SEITE = "https://jonas-sz.github.io/fuer-dich-8k2x/"; // Link zur Geburtstags-Website (erscheint am Ende)
 
@@ -19,7 +19,7 @@ const MILLIONAER = [
   { f: "En qué fase se necesitan siete cartas del mismo color?", o: ["6", "7", "8", "9"], r: 2, b: "E" },
   { f: "Welche Worte wählte ich im bewegten Bild, nachdem wir unsere Räumlichkeiten in Augenschein genommen habe?", o: ["AHHH", "WOW", "YEAH", "WUHUU"], r: 1, b: "U" },
   { f: "Zlh ylho Xku zdu hv dp 2. Dsulo 2025 (ROT13) ?", o: ["16:59", "12:00", "23:23", "15:10"], r: 3, b: "S" },
-  { f: "Was kommt NICHT in meine Bolognese?", o: ["Milch", "Oregano", "Hack", "Tomatenmark"], r: 1, b: "B" },
+  { f: "Was kommt NICHT in meine Bolognese?", o: ["Milch", "Oregano", "Hack", "Tomatenmark"], r: 0, b: "B" },
   { f: "12 – 9 – 5 – 2 – 19 – 20 – 4 – 21 – 13 – 9 – 3 – 8?", o: ["Ja", "Nein", "Mir egal", "Vielleicht"], r: 0, b: "T" },
   { f: "Welcher Film war Pixars 23. Langfilm?", o: ["Luca", "Soul", "COCO", "G.O.A.T"], r: 1, b: "E" },
   { f: "Wieviele Stunden sind wir heute um 12 Uhr zusammen (ab 12 Uhr)?", o: ["21.888", "22.065", "21.912", "22.856"], r: 2, b: "N" },
