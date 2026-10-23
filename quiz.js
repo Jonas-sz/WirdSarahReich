@@ -55,7 +55,7 @@ const MILLIONAER = [
       const dots = el("div", "dots");
       for (let i = 0; i < N; i++) dots.appendChild(el("span", "dot" + (i < idx ? " an" : "")));
       area.appendChild(dots);
-      area.appendChild(el("p", "small-line", "Frage " + (idx + 1) + " von " + N + " · gewonnen: " + idx * EURO_PRO_FRAGE + " €"));
+      area.appendChild(el("p", "small-line", "Frage " + (idx + 1) + " von " + N + " · gewonnen: "nichts" €"));
       area.appendChild(wortBox(buchst));
       area.appendChild(el("p", "spiel-frage", q.f));
       const box = el("div", "opts"); area.appendChild(box);
@@ -70,7 +70,7 @@ const MILLIONAER = [
             setTimeout(function () {
               leeren();
               area.appendChild(el("p", "ergebnis", "Leider falsch."));
-              area.appendChild(el("p", "spiel-frage", "Du hast " + idx * EURO_PRO_FRAGE + " € gewonnen."));
+              area.appendChild(el("p", "spiel-frage", "Du hast es leider nicht geschafft."));
               const rest = VERSUCHE - st.versuche;
               if (rest > 0) area.appendChild(knopf("Nochmal (" + rest + " übrig)", start));
                   else {
