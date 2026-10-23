@@ -13,7 +13,7 @@ const MILLIONAER = [
   { f: "Wieviele Zettel sind in diesem Raum versteckt?", o: ["4", "5", "6", "keiner"], r: 1, b: "D" },
   { f: "Welcher Wochentag ist dein 63 Geburtstag?", o: ["Montag", "Freitag", "Mittwoch", "Sonntag"], r: 2, b: "T" },
   { f: "Welcher Psychologe führte das berühmte Experiment durch, bei dem Menschen vermeintlich anderen Personen tödliche Elektroschocks verabreichten, weil eine Autoritätsperson sie dazu aufforderte?", o: ["Philip Zimbardo", "Stanley Milgram", "Solomon Asch", "B. F. Skinner"], r: 1, b: "I" },
-  { f: "Wohin werden wir fahren?", o: ["Borgsdorf", "Spazieren", "McDonalds", "Zeitung verteilen"], r: 0, b: "W" }
+  { f: "Wohin werden wir fahren?", o: ["Borgsdorf", "Spazieren", "McDonalds", "Zeitung verteilen"], r: 0, b: "W" },
   { f: "Welchen Hubzapfenversatz besitzt die 689-cm³-Zweizylinder-Reihenmotor der Yamaha YZF-R7?", o: ["90°", "180°", "270°", "360°"], r: 2, b: "L" },
   { f: "Wohin wollen wir unbedingt zusammen reisen?", o: ["Italien", "Japan", "Kanada", "Island"], r: 2, b: "M" },
   { f: "Was machen wir am liebsten am Wochenende?", o: ["Ausschlafen", "Wandern", "Filme schauen", "Kochen"], r: 1, b: "E" },
