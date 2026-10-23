@@ -55,7 +55,7 @@ const MILLIONAER = [
       const dots = el("div", "dots");
       for (let i = 0; i < N; i++) dots.appendChild(el("span", "dot" + (i < idx ? " an" : "")));
       area.appendChild(dots);
-      area.appendChild(el("p", "small-line", "Frage " + (idx + 1) + " von " + N + " · gewonnen: "nichts" €"));
+      area.appendChild(el("p", "small-line", "Frage " + (idx + 1) + " von " + N + " · gewonnen: " + (idx * EURO_PRO_FRAGE)));
       area.appendChild(wortBox(buchst));
       area.appendChild(el("p", "spiel-frage", q.f));
       const box = el("div", "opts"); area.appendChild(box);
