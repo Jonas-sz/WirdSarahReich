@@ -20,7 +20,7 @@ const MILLIONAER = [
   { f: "Welche Worte wählte ich im bewegten Bild, nachdem wir unsere Räumlichkeiten in Augenschein genommen habe?", o: ["AHHH", "WOW", "YEAH", "WUHUU"], r: 1, b: "U" },
   { f: "Zlh ylho Xku zdu hv dp 2. Dsulo 2025 (ROT13) ?", o: ["16:59", "12:00", "23:23", "15:10"], r: 3, b: "S" },
   { f: "Was kommt NICHT in meine Bolognese?", o: ["Milch", "Oregano", "Hack", "Tomatenmark"], r: 1, b: "B" },
-  { f: "Wer hat sich bei ersten Treffen mehr getraut?", o: ["Du", "Ich", "Beide", "Keiner"], r: 0, b: "T" },
+  { f: "12 – 9 – 5 – 2 – 19 – 20 – 4 – 21 – 13 – 9 – 3 – 8?", o: ["Ja", "Nein", "Mir egal", "Vielleicht"], r: 0, b: "T" },
   { f: "Welcher Film war Pixars 23. Langfilm?", o: ["Luca", "Soul", "COCO", "G.O.A.T"], r: 1, b: "E" },
   { f: "Wieviele Stunden sind wir heute um 12 Uhr zusammen (ab 12 Uhr)?", o: ["21.888", "22.065", "21.912", "22.856"], r: 2, b: "N" },
   { f: "Stell dich auf das Bett und sag was du siehst", o: ["Nichts", "Jonas", "LEDs", "Etwas anderes..."], r: 3, b: "E" },
