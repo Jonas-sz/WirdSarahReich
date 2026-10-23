@@ -16,14 +16,14 @@ const MILLIONAER = [
   { f: "Wohin werden wir fahren?", o: ["Borgsdorf", "Spazieren", "McDonalds", "Zeitung verteilen"], r: 0, b: "W" },
   { f: "Welchen Hubzapfenversatz besitzt die 689-cm³-Zweizylinder-Reihenmotor der Yamaha YZF-R7?", o: ["90°", "180°", "270°", "360°"], r: 2, b: "L" },
   { f: "Welches Tier siehst du? 70.083, 27.883 ?", o: ["Katze", "Bär", "Ziege", "Hund"], r: 3, b: "M" },
-  { f: "Was machen wir am liebsten am Wochenende?", o: ["Ausschlafen", "Wandern", "Filme schauen", "Kochen"], r: 1, b: "E" },
-  { f: "Was ist meine Lieblingsfarbe?", o: ["Blau", "Grün", "Rosa", "Schwarz"], r: 3, b: "U" },
-  { f: "Wer von uns kommt öfter zu spät?", o: ["Du", "Ich", "Beide gleich", "Keiner"], r: 2, b: "S" },
-  { f: "Wie nenne ich dich am liebsten?", o: ["Schatz", "Maus", "Bärchen", "Hase"], r: 1, b: "B" },
+  { f: "En qué fase se necesitan siete cartas del mismo color?", o: ["6", "7", "8", "9"], r: 2, b: "E" },
+  { f: "Welche Worte wählte ich im bewegten Bild, nachdem wir unsere Räumlichkeiten in Augenschein genommen habe?", o: ["AHHH", "WOW", "YEAH", "WUHUU"], r: 1, b: "U" },
+  { f: "Zlh ylho Xku zdu hv dp 2. Dsulo 2025 (ROT13) ?", o: ["16:59", "12:00", "23:23", "15:10"], r: 3, b: "S" },
+  { f: "Was kommt NICHT in meine Bolognese?", o: ["Milch", "Oregano", "Hack", "Tomatenmark"], r: 1, b: "B" },
   { f: "Wer hat sich bei ersten Treffen mehr getraut?", o: ["Du", "Ich", "Beide", "Keiner"], r: 0, b: "T" },
-  { f: "Was esse ich morgens am liebsten?", o: ["Müsli", "Brötchen", "Obst", "Nichts"], r: 1, b: "E" },
-  { f: "Welche Jahreszeit mag ich am liebsten?", o: ["Frühling", "Sommer", "Herbst", "Winter"], r: 2, b: "N" },
-  { f: "Was war unser schönster gemeinsamer Moment?", o: ["Urlaub", "Kennenlernen", "Geburtstag", "Jahrestag"], r: 1, b: "E" },
+  { f: "Welcher Film war Pixars 23. Langfilm?", o: ["Luca", "Soul", "COCO", "G.O.A.T"], r: 1, b: "E" },
+  { f: "Wieviele Stunden sind wir heute um 12 Uhr zusammen (ab 12 Uhr)?", o: ["21.888", "22.065", "21.912", "22.856"], r: 2, b: "N" },
+  { f: "Stell dich auf das Bett und sag was du siehst", o: ["Nichts", "Jonas", "LEDs", "Etwas anderes..."], r: 3, b: "E" },
 ];
 
 (function () {
